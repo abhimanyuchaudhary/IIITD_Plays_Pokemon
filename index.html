@@ -4,9 +4,9 @@
     <title>Socket.IO chat</title>
     <style>
        * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
+      body { font: 13px Helvetica, Arial;}
       form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 60%; }
-      form input { border: 0; padding: 10px; width: 60%; margin-right: .5%; }
+      form input { border: 0; padding: 10px; width: 75%; margin-right: .5%; }
       form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
       #messages { list-style-type: none; margin: 0; padding: 0; }
       #messages li { padding: 5px 10px; }
@@ -14,7 +14,7 @@
       #messages { margin-bottom: 40px }
       iframe {margin-left: 10%; position: absolute;}
       #idiv {position: fixed;}
-      #mess {position: absolute; width: 40%; margin-left: 58%;}
+      #mess {position: absolute; width: 50%; margin-left: 50%;}
     </style>
   </head>
   <body>
@@ -23,11 +23,12 @@
 	    <form action="">
 	      <input id="m" autocomplete="off" /><button>Send</button>
 	    </form>
-	    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-	    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+	    
 	    <!-- Load the Twitch embed script -->
 	    <!-- <div id="twitch-embed"></div> -->
 	</div>
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <div id = 'idiv'>
 	    <iframe
 	    src="http://player.twitch.tv/?channel=hanitbanga&muted=true"
