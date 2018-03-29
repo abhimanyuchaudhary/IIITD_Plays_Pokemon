@@ -3,20 +3,6 @@
   <head>
     <title>IIITD plays pokemon</title>
     <style>
-      /* * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial;}
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 0%; }
-      form input { border: 0; padding: 10px; width: 75%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
-      #messages { margin-bottom: 40px }
-      iframe {margin-left: 10%; position: absolute;}
-      #idiv {position: fixed;}
-      #mess {position: absolute; width: 50%; margin-left: 50%;}
-      #buttons {width: 10%; padding: 10px; position: fixed; margin-left: 20%}
-      #butdiv {position: fixed; margin-top: 50%}*/
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { font: 13px Helvetica, Arial; }
       form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
@@ -26,6 +12,10 @@
       #messages li { padding: 5px 10px; }
       #messages li:nth-child(odd) { background: #eee; }
       #messages { margin-bottom: 40px }
+      iframe {margin-left: 10%; position: absolute;}
+      #idiv {position: fixed; margin-left: 25%}
+      #mess {position: absolute; width: 50%; margin-left: 0%;}
+
     </style>
   </head>
   <body>
@@ -40,7 +30,7 @@
 	</div>
 	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
 	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-<!--     <div id = 'idiv'>
+    <div id = 'idiv'>
 	    <iframe
 	    src="http://player.twitch.tv/?channel=hanitbanga&muted=true"
 	    height="360"
@@ -51,7 +41,7 @@
 		</iframe>
 	</div>
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
- -->
+
 
 <!--     <div id='butdiv'>
     	<button id='buttons' type="button">b1</button>
