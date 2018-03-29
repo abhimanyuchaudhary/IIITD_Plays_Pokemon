@@ -1,56 +1,48 @@
 <!doctype html>
 <html>
   <head>
-    <title>IIITD plays pokemon</title>
+    <title>Socket.IO chat</title>
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+       * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial;}
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 60%; }
+      form input { border: 0; padding: 10px; width: 75%; margin-right: .5%; }
       form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin-left: 50%; padding: 0; margin-top: 56%;}
+      #messages { list-style-type: none; margin: 0; padding: 0; }
       #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee;  width:100%;}
+      #messages li:nth-child(odd) { background: #eee; }
       #messages { margin-bottom: 40px }
       iframe {margin-left: 10%; position: absolute;}
-      #idiv {position: fixed; margin-left: 25%}
-      #mess {position: absolute; width: 50%; margin-left: 0%;}
-
+      #idiv {position: fixed;}
+      #mess {position: absolute; width: 50%; margin-left: 50%;}
     </style>
   </head>
   <body>
-  	<div id = 'mess'>
-	    <ul id="messages"></ul>
-	    <form action="">
-	      <input id="m" autocomplete="off" /><button>Send</button>
-	    </form>
-	    
-	    <!-- Load the Twitch embed script -->
-	    <!-- <div id="twitch-embed"></div> -->
-	   </div>
-	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <div id = 'mess'>
+      <ul id="messages"></ul>
+      <form action="">
+        <input id="m" autocomplete="off" /><button>Send</button>
+      </form>
+      
+      <!-- Load the Twitch embed script -->
+      <!-- <div id="twitch-embed"></div> -->
+  </div>
+  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <div id = 'idiv'>
-	    <iframe
-	    src="http://player.twitch.tv/?channel=hanitbanga&muted=true"
-	    height="360"
-	    width="640"
-	    frameborder="0"
-	    scrolling="no"
-	    allowfullscreen="true">
-		</iframe>
-	</div>
+      <iframe
+      src="http://player.twitch.tv/?channel=hanitbanga&muted=true"
+      height="360"
+      width="640"
+      frameborder="0"
+      scrolling="no"
+      allowfullscreen="true">
+    </iframe>
+  </div>
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
 
-<!--     <div id='butdiv'>
-    	<button id='buttons' type="button">b1</button>
-    	<button id='buttons' type="button">b2</button>
-    	<button id='buttons' type="button">b3</button>
-    	<button id='buttons' type="button">b4</button>
-    </div>
-
- -->    <script>
+    <script>
       $(function () {
         var socket = io();
         $('form').submit(function(){
